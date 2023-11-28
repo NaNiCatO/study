@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function getBMI(w,h){
+            var bmi = w/((h/100)**2);
+            return bmi;
+        }
+    </script>
+</head>
+<body class="container">
+    <div >
+        <div>
+            aaaaaaaa
+        </div>
+        <div>
+            bbbbbbbb
+        </div>
+    </div>  
+    <div >
+        <div>
+            cccccccc
+        </div>
+        <div>
+            dddddddd
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            var input_w = document.getElementById("in_w");
+            var input_h = document.getElementById("in_h");
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = '';
+            
+            var your_bmi = getBMI(input_w.value,input_h.value);
+
+            const lineBreak = document.createElement("br");
+
+            const info = document.createTextNode("your W: " + input_w.value + "\tH :" + input_h.value);
+
+            const u_bmi = document.createTextNode("your bmi: " + your_bmi);
+
+
+            var h3Element = document.createElement("h3");
+            h3Element.style.fontWeight = "bold";
+
+            if (your_bmi <= 18.5) {
+                h3Element.textContent = "you are Underweight.";
+            } else if (your_bmi <= 24.9) {
+                h3Element.textContent = "you are Normal Weight.";
+            } else if (your_bmi <= 29.9) {
+                h3Element.textContent = "you are Overweight.";
+            } else {
+                h3Element.textContent = "you are Obese.";
+            }
+
+            
+
+            outputElement.appendChild(info);
+            outputElement.appendChild(lineBreak);
+            outputElement.appendChild(u_bmi);
+            outputElement.appendChild(lineBreak);
+            outputElement.appendChild(h3Element);
+
+            input_w.value = '';
+            input_h.value = '';
+        }
+    </script>
+</body>
+</html>

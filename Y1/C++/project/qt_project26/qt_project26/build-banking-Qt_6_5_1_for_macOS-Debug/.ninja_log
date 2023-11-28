@@ -1,0 +1,15 @@
+# ninja log v5
+2032	2239	1685090376130103326	banking.app/Contents/MacOS/banking	cec3125471ccf906
+61	1414	1685092041214025418	CMakeFiles/banking.dir/user_login.cpp.o	79ebde3438cbc701
+60	1733	1685092041531440049	CMakeFiles/banking.dir/login.cpp.o	9401b0cbf1f50220
+60	1801	1685092041600395361	CMakeFiles/banking.dir/register.cpp.o	38a76f6b0d13f5c6
+654	1962	1685090306610770917	CMakeFiles/banking.dir/banking_autogen/mocs_compilation.cpp.o	6ec7ce2a387f1d08
+7	55	1685092039859517512	/Users/mmatttrp/Desktop/qt_project26/build-banking-Qt_6_5_1_for_macOS-Debug/banking_autogen/mocs_compilation.cpp	8420baea33a3125a
+64	1488	1685092041287843783	CMakeFiles/banking.dir/transfer.cpp.o	28c9cd7635c67ced
+62	1882	1685092041681698158	CMakeFiles/banking.dir/deposit.cpp.o	e7bfbbd2b27024a6
+60	1403	1685092041199502013	CMakeFiles/banking.dir/mainwindow.cpp.o	4be81d242b85193d
+7	55	1685092039859517512	/Users/mmatttrp/Desktop/qt_project26/build-banking-Qt_6_5_1_for_macOS-Debug/banking_autogen/timestamp	8420baea33a3125a
+381	1158	1685084166516549187	CMakeFiles/banking.dir/main.cpp.o	12833603deb48175
+7	55	1685092039859517512	banking_autogen/mocs_compilation.cpp	8420baea33a3125a
+63	1439	1685092041238416262	CMakeFiles/banking.dir/withdraw.cpp.o	47bb8f19931a09c2
+7	55	1685092039859517512	banking_autogen/timestamp	8420baea33a3125a

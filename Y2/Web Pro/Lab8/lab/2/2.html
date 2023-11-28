@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alarm</title>
+    <meta charset="utf-8">
+    <style>
+        table {
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        td {
+            border: 0.1px solid black;
+            padding: 4px;
+        }
+
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body
+    style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.25rem;">
+    <h1>Time Schedule</h1>
+    <label for="selectDate">Select Date:</label>
+    <input type="date" id="selectDate">
+    <div id="divAlarm"></div>
+    <br><br>
+    <button id="btn"></button>
+    <input type="file" id="importFile" style="display:none">
+    <button id="importBtn">Choose File</button>
+    <button id="saveBtn">Save Schedule</button>
+    <button id="exportBtn">Export Schedule</button>
+    <button id="clearStorageBtn">Clear Storage</button>
+    <br><br>
+    <script src="Storage.js"></script>
+</body>
+
+</html>

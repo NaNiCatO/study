@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/Lab9/Lab/2/Calculator.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./Calculator_files/cal_styles.css">
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head> 
+    <body>
+        <table id="myTable">
+            <tbody><tr>
+                <td colspan="4" style="text-align: right;">
+                    <label id="result">0</label>
+                </td>
+            </tr> 
+            <tr>
+                <td id="Backspace">&lt;</td>
+                <td id="/">/</td>
+                <td id="*">*</td>
+                <td id="myCell" style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">-</td>
+            </tr>
+            <tr>
+                <td id="7">7</td>
+                <td id="8">8</td>
+                <td id="9">9</td>
+                <td id="+" rowspan="2">+</td>
+            </tr>
+            <tr>
+                <td id="4">4</td>
+                <td id="5">5</td>
+                <td id="6">6</td>
+            </tr>
+            <tr>
+                <td id="1">1</td>
+                <td id="2">2</td>
+                <td id="3">3</td>
+                <td id="Enter" rowspan="2">=</td>
+            </tr>
+            <tr>
+                <td id="0" colspan="2">0</td>
+                <td id="c" style="font-weight: bold;">C</td>
+            </tr>
+        </tbody></table>
+    
+
+        <py-script>
+            from js import document
+            from pyodide import create_proxy
+
+            class Calculator():
+                def __init__(self, element_id):
+                    self.element_id = element_id
+                    self._element = None
+
+                @property
+                def element(self):
+                    if self._element is None:
+                        self._element = document.getElementById(self.element_id)
+                    return self._element
+
+                def onclick(self, event):
+                    if event.target.id == 'c':
+                        self.element.innerHTML = '0'
+                    elif event.target.id == 'Backspace':
+                        self.element.innerHTML = self.element.innerHTML[:-1]
+                    elif event.target.id == 'Enter':
+                        if "/0" in self.element.innerHTML:
+                            self.element.innerHTML = "Infinity"
+                            return
+                        self.element.innerHTML = str(eval(self.element.innerHTML))
+                    else:
+                        if self.element.innerHTML == '0':
+                            self.element.innerHTML = event.target.id
+                        else:
+                            self.element.innerHTML += event.target.id
+                
+                def onkeyboard(self, event):
+                    if event.key == 'c':
+                        self.element.innerHTML = '0'
+                    elif event.key == 'Backspace':
+                        self.element.innerHTML = self.element.innerHTML[:-1]
+                    elif event.key == 'Enter':
+                        if "/0" in self.element.innerHTML:
+                            self.element.innerHTML = "Infinity"
+                            return
+                        self.element.innerHTML = str(eval(self.element.innerHTML))
+                    elif event.key.isnumeric() or event.key in ['+', '-', '*', '/']:
+                        if self.element.innerHTML == '0':
+                            self.element.innerHTML = event.key
+                        else:
+                            self.element.innerHTML += event.key
+
+
+            calculator = Calculator('result')
+
+            keyboard = create_proxy(calculator.onkeyboard)
+            click = create_proxy(calculator.onclick)
+
+            document.addEventListener('keydown', keyboard)
+            document.addEventListener('click', click)
+
+        </py-script>
+</body></html>

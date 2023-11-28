@@ -1,0 +1,48 @@
+body {
+    min-width: 480px;
+    max-width: 1080px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.courses{
+    padding-left: 20px;
+    width: 100%;
+}
+
+.courses div{
+    border: 1px solid hsla(0, 0%, 0%, 0.603);
+    padding: 7px;
+    width: 90%;
+}
+
+@media screen and (max-width: 750px) {
+    /* Adjust styles for smaller screens */
+    .container {
+        flex-direction: column;
+    }
+}

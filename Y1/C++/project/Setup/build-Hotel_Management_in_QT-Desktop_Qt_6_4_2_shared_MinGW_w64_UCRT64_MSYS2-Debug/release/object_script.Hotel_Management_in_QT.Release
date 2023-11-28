@@ -1,0 +1,12 @@
+release/main.o
+release/mainwindow.o
+release/hotel.o
+release/roomavailabledialog.o
+release/checkoutdialog.o
+release/bookroomdialog.o
+release/transaction.o
+release/moc_mainwindow.o
+release/moc_roomavailabledialog.o
+release/moc_checkoutdialog.o
+release/moc_bookroomdialog.o
+release/moc_transaction.o

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function getBMI(w,h){
+            var bmi = w/((h/100)**2);
+            return bmi;
+        }
+    </script>
+</head>
+<body>
+    <h1>BMI Calculator</h1><br>
+    <label for="in_w">Weight (kg): </label>
+    <input type="number" id="in_w">
+    <label for="in_h">Height (cm): </label>
+    <input type="number" id="in_h">
+    <button onclick="calculate()">Calculate</button>
+
+    <h2>BMI Result</h2><br>
+    <p id="output"></p><br>
+    <h2>BMI Referenes</h2>
+    <table>
+        <tr>
+            <th>BMI</th>
+            <th>Classification</th>
+        </tr>
+        <tr>
+            <td>Less than 18.5</td>
+            <td>Underweight</td>
+        </tr>
+        <tr>
+            <td>18.5-24.9</td>
+            <td>Normal Weight</td>
+        </tr>
+        <tr>
+            <td>25.0-29.9</td>
+            <td>Overwight</td>
+        </tr>
+        <tr>
+            <td>30.0 or more</td>
+            <td>Obese</td>
+        </tr>
+
+    </table>
+
+    <script>
+        function calculate() {
+            var input_w = document.getElementById("in_w");
+            var input_h = document.getElementById("in_h");
+            const outputElement = document.getElementById("output");
+
+            outputElement.innerHTML = '';
+            
+            var your_bmi = getBMI(input_w.value,input_h.value);
+
+            const lineBreak = document.createElement("br");
+
+            const info = document.createTextNode("your W: " + input_w.value + "\tH :" + input_h.value);
+
+            const u_bmi = document.createTextNode("your bmi: " + your_bmi);
+
+
+            var h3Element = document.createElement("h3");
+            h3Element.style.fontWeight = "bold";
+
+            if (your_bmi <= 18.5) {
+                h3Element.textContent = "you are Underweight.";
+            } else if (your_bmi <= 24.9) {
+                h3Element.textContent = "you are Normal Weight.";
+            } else if (your_bmi <= 29.9) {
+                h3Element.textContent = "you are Overweight.";
+            } else {
+                h3Element.textContent = "you are Obese.";
+            }
+
+            
+
+            outputElement.appendChild(info);
+            outputElement.appendChild(lineBreak);
+            outputElement.appendChild(u_bmi);
+            outputElement.appendChild(lineBreak);
+            outputElement.appendChild(h3Element);
+
+            input_w.value = '';
+            input_h.value = '';
+        }
+    </script>
+</body>
+</html>

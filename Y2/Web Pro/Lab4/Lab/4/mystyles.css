@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(254,166,191);
+}
+
+.section {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    background-color: rgb(255,216,217);
+}
+
+.section img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    background-color: rgb(255,198,204);
+}
+
+.section h3 {
+    margin: 10px 0;
+    background-color: rgb(255,243,243);
+}
+
+.section h3 {
+    margin: 10px 0;
+    background-color: rgb(255,243,243);
+}
+
+.section h3:hover {
+    background-color: rgb(208,202,225);
+}
+
+.section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section label:hover {
+    background-color: rgb(208,202,225);
+}
+
+.section input[type="text"],
+.section input[type="email"],
+.section input[type="tel"],
+.section input[type="range"],
+.section input[type="date"],
+.section input[type="color"],
+.section textarea,
+.section select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.section input[type="text"]:hover,
+.section input[type="email"]:hover,
+.section input[type="tel"]:hover,
+.section input[type="range"]:hover,
+.section input[type="date"]:hover,
+.section input[type="color"]:hover,
+.section textarea:hover,
+.section select:hover {
+    background-color: rgb(208,202,225);
+}
+
+.section input[type="range"] + output {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.section textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.section .submit-button {
+    text-align: right;
+    margin-top: 10px;
+}

@@ -1,0 +1,60 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='100000' height='800'>
+<line x1='50' y1='50' x2='350' y2='50' stroke='lightgray' stroke-dasharray='2' />
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+<text x='80' y='665' text-anchor='middle'>1</text>
+<text x='180' y='665' text-anchor='middle'>2</text>
+<text x='280' y='665' text-anchor='middle'>3</text>
+<text x='40' y='55' text-anchor='end' font-size='14'>10000</text>
+<line x1='50' y1='170' x2='350' y2='170' stroke='lightgray' stroke-dasharray='2' />
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+<text x='40' y='175' text-anchor='end' font-size='14'>8000</text>
+<line x1='50' y1='290' x2='350' y2='290' stroke='lightgray' stroke-dasharray='2' />
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+<text x='40' y='295' text-anchor='end' font-size='14'>6000</text>
+<line x1='50' y1='410' x2='350' y2='410' stroke='lightgray' stroke-dasharray='2' />
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+<text x='40' y='415' text-anchor='end' font-size='14'>4000</text>
+<line x1='50' y1='530' x2='350' y2='530' stroke='lightgray' stroke-dasharray='2' />
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+<text x='40' y='535' text-anchor='end' font-size='14'>2000</text>
+<line x1='50' y1='650' x2='350' y2='650' stroke='lightgray' stroke-dasharray='2' />
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+<text x='40' y='655' text-anchor='end' font-size='14'>0</text>
+<text x='80' y='710' text-anchor='middle' font-size='14'>Total Amount: $9000</text>
+<rect x='50' y='50' width='60' height='600' fill='steelblue' />
+<text x='80' y='40' text-anchor='middle'>10000</text>
+<rect x='150' y='80' width='60' height='570' fill='steelblue' />
+<text x='180' y='70' text-anchor='middle'>9500</text>
+<rect x='250' y='110' width='60' height='540' fill='steelblue' />
+<text x='280' y='100' text-anchor='middle'>9000</text>
+</svg>

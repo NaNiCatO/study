@@ -1,0 +1,4 @@
+C:/Users/bbcom/Desktop/Code/C++/lab2/HW/2/build/CMakeFiles/q2.1.dir
+C:/Users/bbcom/Desktop/Code/C++/lab2/HW/2/build/CMakeFiles/q2.2.dir
+C:/Users/bbcom/Desktop/Code/C++/lab2/HW/2/build/CMakeFiles/edit_cache.dir
+C:/Users/bbcom/Desktop/Code/C++/lab2/HW/2/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transcript Entry Form</title>
+    <script>
+        id_courese = [];
+        
+    </script>
+</head>
+<body>
+    <h2>Transcript Entry Form</h2>
+    <form action="/submit/{{ id }}" method="post">
+        <h3>ID : {{ id }}</h3>
+        <h3>Name : {{ name }}</h3>
+
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+                <th>Score</th>
+            </tr>
+
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.code }}</td>
+                <td>{{ course.name }}</td>
+                <td>{{ course.credits }}</td>
+                <td><input type="text" name="{{ course.code }}" id="{{ course.code }}" value=""></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

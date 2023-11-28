@@ -1,0 +1,3 @@
+Password:ASD
+Type:Admin
+Notificationn:0

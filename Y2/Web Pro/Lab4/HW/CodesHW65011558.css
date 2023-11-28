@@ -1,0 +1,204 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+.sidebar-decoration{
+    width: 35px;
+    border-right: 2px solid hsla(0,0%,73%,.3);
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #313131;
+    position: fixed;
+    height: 100%;
+    margin: 0px;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 35px;
+    color: #faf7f7;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: #faf7f7;
+}
+
+.profile{
+    margin-left: 35px;
+    font-size: 25px;
+    padding: 20px;
+    border-bottom: 2px solid hsla(0,0%,73%,.3);
+    color: #faf7f7;
+}
+
+img.circular {
+    border-radius: 50%;
+    width: 125px;
+    height: auto;
+    overflow: hidden;
+}
+
+.content {
+    padding-left: 350px;
+}
+
+.title-personal {
+    padding: 45px;
+    font-size: xx-large;
+    font-family: Arial, sans-serif ;
+    background-color: #f0e3d3;
+    border-top: 1px solid #313131;
+}
+
+.content {
+    float: left;
+    width: 70%;
+}
+
+.contact-info {
+    display: flex; /* Display the email and address side by side */
+    align-items: center; /* Center align items vertically */
+    gap: 20px; /* Gap between email and address */
+    padding: 20px; /* Add padding around the entire contact info section */
+    background-color: #faf0e4; /* Add a background color for visual separation */
+}
+
+.info {
+    flex: 1; /* Distribute available space evenly between email and address */
+    flex-basis: 50%; /* Set the width for email and address to 50% each */
+    font-size: 20px;
+}
+
+.info a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.description{
+    border-top: 2px solid hsla(0,0%,73%,.3);
+    font-size: 20px;
+    padding: 45px;
+    background-color: #faf0e4;
+}
+
+.title-experience {
+    padding: 45px;
+    font-size: xx-large;
+    font-family: Arial, sans-serif ;
+    background-color: #faf0e4;
+    border-top: 1px solid #313131;
+}
+
+.experience-entry {
+    display: flex;
+    align-items: flex-start; /* Align items at the top of the flex container */
+    padding-top: 40px; /* Add some space between entries */
+    padding-bottom: 40px;
+    background-color: #f0e3d3;
+}
+
+.sidebar-date {
+    padding-left: 50px; /* Add padding for better spacing */
+    padding-right: 50px;
+    font-size: larger;
+}
+
+.sidebar-date p {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+.details-experience {
+    flex: 1;
+    padding-left: 35px; /* Add padding for better spacing */
+    border-left: 2px solid #555;
+
+}
+
+.details p{
+    font-size: x-large;
+}
+
+.details li{
+    font-size: 20px;
+    padding: 7px;
+}
+
+.title-education {
+    padding: 45px;
+    font-size: xx-large;
+    font-family: Arial, sans-serif ;
+    background-color: #f0e3d3;
+    border-top: 1px solid #313131;
+}
+
+.education-entry {
+    display: flex;
+    align-items: flex-start; /* Align items at the top of the flex container */
+    padding-top: 40px; /* Add some space between entries */
+    padding-bottom: 40px;
+    background-color: #faf0e4;
+}
+
+.details-education {
+    flex: 1;
+    padding-left: 35px; /* Add padding for better spacing */
+    padding-bottom: 100px;
+    border-left: 2px solid #555;
+
+}
+
+.title-achievements {
+    padding: 45px;
+    font-size: xx-large;
+    font-family: Arial, sans-serif ;
+    background-color: #faf0e4;
+    border-top: 1px solid #313131;
+}
+
+.achiev{
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-color: #f0e3d3;
+}
+
+.achiev li{
+    font-size: 20px;
+    padding: 7px;
+}
+
+.title-interests {
+    padding: 45px;
+    font-size: xx-large;
+    font-family: Arial, sans-serif ;
+    background-color: #f0e3d3;
+    border-top: 1px solid #313131;
+}
+
+.keyword-list{
+    background-color: #faf0e4;
+    align-items: center;
+    display: flex; 
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+
+.keyword{
+    font-size: xx-large;
+    flex: auto;
+    padding: 25px;
+}

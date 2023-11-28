@@ -1,0 +1,27 @@
++-----------------+  
+|      Hero       |   
++------------------+             +----------------------+
+| - name: string   |             |       Warrior        |
++------------------+             +----------------------+
+| + Hero()         | <-----------| - constructor        |
+| + Hero(string)   |             | - destructor         |
+| + Hero(istream&) |             | - greetings()        |
+| + Name() const   |             | - print(ostream&)    |
+| + ~Hero()        |             +----------------------+
+| + greetings()    |                      
+| + print(ostream&)|  <-------------------+
+| + read(istream&) |                      |
++------------------+                      |
+            /\                            |
+             |                            |
+             |                            |
+             |                            |
+             |                            |
++-----------------+             +----------------------+
+|     Fighter     |             |         Mage         |
++-----------------+             +----------------------+
+| - constructor   |             | - constructor        |
+| - destructor    |             | - destructor         |
+| - greetings()   |             | - greetings()        |
+| - print(ostream&)|            | - print(ostream&)    |
++-----------------+             +----------------------+

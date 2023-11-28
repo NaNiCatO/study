@@ -1,0 +1,3 @@
+C:/Users/bbcom/Desktop/Code/C++/project/qt_project/banking/build-result-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/Banking_operation.dir
+C:/Users/bbcom/Desktop/Code/C++/project/qt_project/banking/build-result-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/edit_cache.dir
+C:/Users/bbcom/Desktop/Code/C++/project/qt_project/banking/build-result-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/rebuild_cache.dir

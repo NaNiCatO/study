@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: auto;
+        }
+
+        .container>* {
+            text-align: center;
+        }
+        .display {
+            margin-top: 4rem;
+        }
+
+        table,
+        th,
+        td {
+            margin: auto;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        table {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Online Timer</h1>
+        <div class="display">
+            Current Time (1000x faster): <span id="hours">00</span>:<span id="minutes">00</span>
+        </div>
+        <div class="controls">
+            <button id="toggleTable">Toggle Table</button>
+        </div>
+    </div>
+    <script>
+        let hours = 0;
+        let minutes = 0;
+
+        const hoursDisplay = document.getElementById('hours');
+        const minutesDisplay = document.getElementById('minutes');
+        let tableCreated = false;
+
+        setInterval(updateTimer, 1);
+
+        function updateTimer() {
+            for (let i = 0; i < schedule.length; i++) {
+                if (convertTimeToMinutes(schedule[i].time) === (hours * 60 + minutes)) {
+                    alert(schedule[i].alertMessage);
+                }
+            }
+            minutes++;
+            if (minutes === 60) {
+                hours++;
+                minutes = 0;
+            } else if (hours === 24) {
+                hours = 0;
+            }
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            hoursDisplay.textContent = String(hours).padStart(2, '0');
+            minutesDisplay.textContent = String(minutes).padStart(2, '0');
+        }
+
+        
+
+        function AlertTime(time, alertMessage) {
+            this.time = time || "";
+            this.alertMessage = alertMessage || "";
+        }
+
+        const schedule = [
+            new AlertTime("09:00", "Wake up"),
+            new AlertTime("12:00", "Eat breakfast"),
+            new AlertTime("18:00", "Go to work"),
+        ];
+        createTable();
+        //console.log(convertTimeToMinutes("09:00"));
+
+        // schedule.forEach((alertTime) => {
+        //     alertTime.alert();
+        // });
+
+        function convertTimeToMinutes(timeString) {
+            const [hours, minutes] = timeString.split(":").map(Number);
+            if (isNaN(hours) || isNaN(minutes) || hours < 0 || minutes < 0 || hours >= 24 || minutes >= 60) {
+                throw new Error("Invalid time format");
+            }
+            return (hours * 60 + minutes);
+        }
+
+        function createTable() {
+            const table = document.createElement("table");
+            table.id = "myTable";
+            const tableHead = document.createElement("thead");
+            const tableBody = document.createElement("tbody");
+            const tableHeadRow = document.createElement("tr");
+            const tableHeadTime = document.createElement("th");
+            const tableHeadMessage = document.createElement("th");
+            tableHeadTime.textContent = "Time";
+            tableHeadMessage.textContent = "Message";
+            tableHeadRow.appendChild(tableHeadTime);
+            tableHeadRow.appendChild(tableHeadMessage);
+            tableHead.appendChild(tableHeadRow);
+            table.appendChild(tableHead);
+            schedule.forEach((alertTime) => {
+                const tableBodyRow = document.createElement("tr");
+                const tableBodyTime = document.createElement("td");
+                const tableBodyMessage = document.createElement("td");
+                tableBodyTime.textContent = alertTime.time;
+                tableBodyMessage.textContent = alertTime.alertMessage;
+                tableBodyRow.appendChild(tableBodyTime);
+                tableBodyRow.appendChild(tableBodyMessage);
+                tableBody.appendChild(tableBodyRow);
+            });
+            table.appendChild(tableBody);
+            document.body.appendChild(table);
+            tableCreated = true;
+        }
+        // Function to delete the table
+        function deleteTable() {
+            const table = document.getElementById("myTable");
+            const addRowButton = document.getElementById("addRowButton");
+            if (table) {
+                table.remove();
+                tableCreated = false; // Set the flag to false
+            }
+        }
+
+        const toggleTableButton = document.getElementById("toggleTable");
+        toggleTableButton.addEventListener("click", function () {
+            if (tableCreated) {
+                deleteTable();
+                createEditTable();
+                setInterval(updateTimer, 1);
+            } else {
+                createTable();
+                deleteEditTable();
+                setInterval(updateTimer, 1);
+            }
+        });
+
+        function createEditTable() {
+            const editTable = document.createElement("table");
+            editTable.id = "editTable";
+
+            const editTableHead = document.createElement("thead");
+            const editTableBody = document.createElement("tbody");
+
+            const editTableHeadRow = document.createElement("tr");
+            const editTableHeadTime = document.createElement("th");
+            const editTableHeadMessage = document.createElement("th");
+            const editTableHeadChange = document.createElement("th");
+
+            const addRowButton = document.createElement("button");
+            addRowButton.id = "addRowButton";
+            addRowButton.addEventListener("click", function () {
+                schedule.push(new AlertTime("", "Type here"));
+                deleteEditTable();
+                createEditTable();
+            });
+
+            editTableHeadTime.textContent = "Time";
+            editTableHeadMessage.textContent = "Message";
+            editTableHeadChange.textContent = "Change";
+            addRowButton.textContent = "Add Row";
+
+            editTableHeadRow.appendChild(editTableHeadTime);
+            editTableHeadRow.appendChild(editTableHeadMessage);
+            editTableHeadRow.appendChild(editTableHeadChange);
+            editTableHead.appendChild(editTableHeadRow);
+            editTable.appendChild(editTableHead);
+
+            schedule.forEach((alertTime, index) => {
+                const editTableBodyRow = document.createElement("tr");
+                const editTableBodyTime = document.createElement("td");
+                const editTableBodyMessage = document.createElement("td");
+                const editTableBodyChange = document.createElement("td");
+                const button = document.createElement("button");
+                button.textContent = "Remove";
+                button.addEventListener("click", function () {
+                    schedule.splice(index, 1);
+                    deleteEditTable();
+                    createEditTable();
+                });
+
+                const timeInput = document.createElement("input");
+                timeInput.type = "time";
+                timeInput.value = alertTime.time;
+                timeInput.addEventListener("input", function () {
+                    schedule[index].time = timeInput.value;
+                });
+
+                const messageInput = document.createElement("input");
+                messageInput.type = "text";
+                messageInput.value = alertTime.alertMessage;
+                messageInput.addEventListener("input", function () {
+                    schedule[index].alertMessage = messageInput.value;
+                });
+
+                editTableBodyTime.appendChild(timeInput);
+                editTableBodyMessage.appendChild(messageInput);
+                editTableBodyChange.appendChild(button);
+
+
+                editTableBodyRow.appendChild(editTableBodyTime);
+                editTableBodyRow.appendChild(editTableBodyMessage);
+                editTableBodyRow.appendChild(editTableBodyChange);
+                editTableBody.appendChild(editTableBodyRow);
+            });
+
+            editTable.appendChild(editTableBody);
+
+            // If there's an existing editTable, remove it first
+            const existingEditTable = document.getElementById("editTable");
+            if (existingEditTable) {
+                existingEditTable.remove();
+            }
+
+            document.body.appendChild(editTable);
+            document.body.appendChild(addRowButton);
+        }
+        function deleteEditTable() {
+            const editTable = document.getElementById("editTable");
+            const addRowButton = document.getElementById("addRowButton");
+            editTable.remove();
+            addRowButton.remove();
+
+        }
+    </script>
+</body>
+
+</html>

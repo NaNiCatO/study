@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<style>
+    table, tr, td{
+      margin: auto;
+    }
+    .photo{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    .htable{
+      margin: auto;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    .mtable{
+        border-right: 1px solid black;
+        border-collapse: collapse;
+    }
+    .small-input-int{
+        width: 45px;
+        text-align: center;
+    }
+    .subject-id{
+        width: 65px;
+    }
+    .subject-name{
+        word-wrap: break-word;
+        width: 320px;
+    }
+
+</style>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unofficial Transcript</title>
+    </head>
+    <body>
+        <center><h2>(Unofficial Transcript)</h2></center>
+        <table style="width: 70%">
+            <tr>
+                <td colspan="2" style="height:70px"><center>School of Engineering</center></td>
+                <td class="photo" rowspan="2" style="width: 10%;"><center>Photo</center></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Mr./Miss Nxxxx Xxxxxxx">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="birth">Date of Birth</label>
+                    <input type="date" id="birth" name="birth" placeholder="MMMM DD, 20xx ">
+                </td>
+                <td>
+                    <label for="id">Student ID</label>
+                    <input type="number" id="id" name="id" placeholder="65xxxxxx">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="admission">Date of Admission</label>
+                    <input type="number" id="admission" name="admission" placeholder="20xx">
+                </td>
+                <td>
+                    <label for="graduation">Date of Graduation</label>
+                    <input type="date" id="graduation" name="graduation" placeholder="N/A">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="degree">Degree</label>
+                    <input type="text" id="degree" name="degree" placeholder="Bachelor of Engineering">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="major">Major</label>
+                    <input type="text" id="major" name="major" placeholder="Software Engineering">
+                </td>
+            </tr>
+        </table>
+        <table class="htable" style="width: 70%">
+            <tr class="htable">
+                <th class="htable" style="width: 40%;" colspan="2">COURSE TITLE</th>
+                <th class="htable">CREDIT</th>
+                <th class="htable">GRADE</th>
+                <th class="htable" style="width: 40%;" colspan="2">COURSE TITLE</th>
+                <th class="htable">CREDIT</th>
+                <th class="htable">GRADE</th>
+            </tr>
+            <tr >
+                <th colspan="2" class="mtable"><u>Transfer Credit</u></th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006208"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="ACADEMIC ENGLISH 1"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006209"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="ACADEMIC ENGLISH 2"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <th colspan="2" class="mtable">
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                </th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+            <tr >
+                <th colspan="2" class="mtable"><u>1st Semester, Year, 2021-2022</u></th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006007"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="CALCULUS 1"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006107"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="INTRODUCTION TO COMPUTERS AND PROGRAMMING"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="4"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006108"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="BASIC ELECTRICITY AND ELECTRONICS"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006301"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="INTRODUCTION TO LOGIC"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016235"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="C PROGRAMMING"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016236"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="C PROGRAMMING LABORATORY"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="1"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <th colspan="2" class="mtable">
+                    <label>GPS :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                    &emsp;
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                </th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+
+            <tr >
+                <th colspan="2" class="mtable"><u>2nd Semester, Year, 2021-2022</u></th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006008"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="CALCULUS 2"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006303"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="CULTURAL STUDIES"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016105"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="DISCRETE MATHEMATICS"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016204"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="DIGITAL CIRCUIT AND LOGIC DESIGN"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016205"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="DIGITAL CIRCUIT LABORATORY"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="1"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016209"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="OBJECT-ORIENTED CONCEPTS AND PROGRAMMING"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016210"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="OBJECT-ORIENTED PROGRAMMING LABORATORY"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="1"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <th colspan="2" class="mtable">
+                    <label>GPS :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                    &emsp;
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                </th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+
+            <tr >
+                <th colspan="2" class="mtable"><u>1st Semester, Year, 2022-2023</u></th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006006"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="LINEAR ALGEBR"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006210"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="TECHNICAL WRITING"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13006403"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="BUSINESS ADMINISTRATION"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016207"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="COMPUTER ORGANIZATION AND ASSEMBLY LANGUAGE"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016208"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="COMPUTER ORGANIZATION AND ASSEMBLY LANGUAGE LABORATORY"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="1"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016212"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="DATA STRUCTURES AND ALGORITHMS"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016213"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="DATA STRUCTURES AND ALGORITHMS LABORATORY"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id" placeholder="13016249"></td>
+                <td class="mtable"><input type="text" id="subj-name" name="subj-name" class="subject-name" placeholder="ADVANCED OBJECT-ORIENTED PROGRAMMING"></td>
+                <td class="mtable"><center><input type="number" id="credit" name="credit" class="small-input-int" placeholder="3"></center></td>
+                <td class="mtable"><center><input type="number" id="grade" name="grade" class="small-input-int" placeholder="X"></center></td>
+            </tr>
+            <tr>
+                <th colspan="2" class="mtable">
+                    <label>GPS :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                    &emsp;
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int" placeholder="X.XX">
+                </th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="mtable">
+                    <br><br>
+                    <label>Total number of credits earned:</label>
+                    <input type="number" class="small-input-int" placeholder="XX">
+                </th>
+                <td class="mtable"></td>
+                <td class="mtable"></td>
+            </tr>
+
+        </table>
+    </body>
+</html>

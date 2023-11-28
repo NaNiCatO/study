@@ -1,0 +1,5 @@
+x= '12345'
+l = str(0+1)
+print(x)
+x = x.strip(l)
+print(x)

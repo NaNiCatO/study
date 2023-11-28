@@ -1,0 +1,9 @@
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/banking.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/edit_cache.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/list_install_components.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/install.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/install/local.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/install/strip.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/banking_autogen_timestamp_deps.dir
+C:/Users/bbcom/Documents/build-banking-Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2_qt5_sha-Debug/CMakeFiles/banking_autogen.dir

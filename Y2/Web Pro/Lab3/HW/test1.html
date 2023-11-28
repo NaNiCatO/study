@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<style>
+    table, tr, td{
+      margin: auto;
+    }
+    .photo{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    .bottom th, .bottom td {
+        border-right: 1px solid black;
+    }
+
+    /* Styling for input fields (optional) */
+    input[type="text"], input[type="date"], input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    }
+    
+    .small-input-int{
+        width: 50px;
+    }
+    .subject-id{
+        width: 65px;
+    }
+    .subject-name{
+        word-wrap: break-word;
+        width: 320px;
+    }
+
+</style>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unofficial Transcript</title>
+    </head>
+    <body>
+        <center><h2>(Unofficial Transcript)</h2></center>
+        <table style="width: 70%">
+            <tr>
+                <td colspan="2" style="height:70px"><center>School of Engineering</center></td>
+                <td class="photo" rowspan="2" style="width: 14%;"><center>Photo</center></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="birth">Date of Birth</label>
+                    <input type="date" id="birth" name="birth">
+                </td>
+                <td>
+                    <label for="id">Student ID</label>
+                    <input type="number" id="id" name="id">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="admission">Date of Admission</label>
+                    <input type="number" id="admission" name="admission">
+                </td>
+                <td>
+                    <label for="graduation">Date of Graduation</label>
+                    <input type="date" id="graduation" name="graduation">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="degree">Degree</label>
+                    <input type="text" id="degree" name="degree">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="major">Major</label>
+                    <input type="text" id="major" name="major">
+                </td>
+            </tr>
+        </table>
+        <table class="bottom" style="width: 70%">
+            <tr class="bottom">
+                <th class="bottom" style="width: 40%;" colspan="2">COURSE TITLE</th>
+                <th class="bottom">CREDIT</th>
+                <th class="bottom">GRADE</th>
+                <th class="bottom" style="width: 40%;" colspan="2">COURSE TITLE</th>
+                <th class="bottom">CREDIT</th>
+                <th class="bottom">GRADE</th>
+            </tr>
+            <tr >
+                <th colspan="2"><u>Transfer Credit</u></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int">
+                </th>
+            </tr>
+            <tr >
+                <th colspan="2"><u>1st Semester, Year, 2021-2022</u></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>
+                    <label>GPS :</label>
+                    <input type="number" class="small-input-int">
+                    &emsp;
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int">
+                </th>
+            </tr>
+
+            <tr >
+                <th colspan="2"><u>2nd Semester, Year, 2021-2022</u></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>
+                    <label>GPS :</label>
+                    <input type="number" class="small-input-int">
+                    &emsp;
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int">
+                </th>
+            </tr>
+
+            <tr >
+                <th colspan="2"><u>1st Semester, Year, 2022-2023</u></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="subj-id" name="subj-id" class="subject-id"></td>
+                <td><input type="text" id="subj-name" name="subj-name" class="subject-name"></td>
+                <td><input type="number" id="credit" name="credit" class="small-input-int"></td>
+                <td><input type="number" id="grade" name="grade" class="small-input-int"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>
+                    <label>GPS :</label>
+                    <input type="number" class="small-input-int">
+                    &emsp;
+                    <label>GPA :</label>
+                    <input type="number" class="small-input-int">
+                </th>
+            </tr>
+
+            <tr>
+                <td></td>
+                <th>
+                    <br><br>
+                    <label>Total number of credits earned:</label>
+                    <input type="number" class="small-input-int">
+                </th>
+            </tr>
+
+        </table>
+    </body>
+</html>

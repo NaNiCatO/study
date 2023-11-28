@@ -1,0 +1,29 @@
+body  {
+    background-color: rgb(255, 255, 255);
+}
+table, td {
+    border-collapse: collapse; 
+    width:45%;
+  }
+th{
+      border-bottom: 1px solid black;
+      text-align: bottom;
+}
+input, textarea, select{
+    background-color: bisque;
+}
+.topic{
+    background-color: rgb(208,202,225);
+}
+
+.lightcoral {
+    background-color: rgb(255,216,217);
+}
+
+.lightblue {
+background-color: rgb(255,198,204);
+}
+
+.lightyellow {
+    background-color: rgb(254,166,191);
+}

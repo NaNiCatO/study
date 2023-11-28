@@ -1,0 +1,14 @@
+x = []
+j = -1
+for i in range(int(8/2)):
+    xnew = 2**i
+    x.insert(0,xnew)
+    for j in range(i+1):
+        print(x[j], end=' ')
+    print()
+
+for i in range(int(8/2)):
+    for j in range(len(x)):
+        print(x[j], end=' ')
+    print()
+    x.pop(0)

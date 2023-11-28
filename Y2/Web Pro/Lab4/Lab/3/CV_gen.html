@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://161.246.5.61/Lab.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        table{
+          border-collapse: collapse; 
+          width:45%;
+        }
+        td{
+            color: crimson;
+            font: 1em sans-serif;
+        }
+        .colorful{
+            color: aqua;
+        }
+        .colorful:hover{
+            background-color: yellow;
+        }   
+        th{
+            border-bottom: 1px solid black;
+            text-align: bottom;
+        }
+
+        label:hover, input:hover, th:hover, h3:hover{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <table class="colorful">
+            <tr>
+                <th rowspan="3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpq23ZvA8xUTFJR0i2cTRD5ZZHDWt1CI_vcLUFnLc&s" alt="image" width="300"></th>
+                <th>Personal Information:</th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">Age:</label><br>
+                    <input type="range" id="age" min="0" max="100" oninput="this.nextElementSibling.value = this.value"> 
+                    <output>50</output>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><label for="profile">Profile:</label></center>
+                    <textarea id="profile" rows="4" cols="43"></textarea>
+                </td>
+                <td>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email"><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone"><br><br>
+                </td>
+            </tr>
+        </table>
+        <table class="colorful">
+            <tr>
+                <th width="300">Address:</th>
+                <th>Education:</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="street" placeholder="Maple Street"></td>
+                <td><h3>University:</h3></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="city" placeholder="California"></td>
+                <td><input type="text" id="university" placeholder="KMITL"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="country">
+                        <option value="Thailand">Thailand</option>
+                        <option value="England">England</option>
+                        <option value="Scorland">Scorland</option>
+                    </select>
+                </td>
+                <td>
+                    <h3>Degree:</h3><br>
+                    <input type="text" id="degree" placeholder="SE">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h3>Year of Graduation:</h3><br>
+                    <input type="date" id="graduationYear"><br><br>
+                </td>
+            </tr>
+        </table>
+        <table class="colorful">
+            <tr>    
+                <th width="300">Contact:</th>
+                <th>Skills & Experience:</th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ref">Reference:</label>
+                    <textarea id="ref" rows="4" cols="40"></textarea>
+                </td>
+                <td>
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" rows="4" cols="40"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="favColour">Favorite Colour:</label>
+                    <input type="color" id="favColour">
+                </td>
+                <td>
+                    <label for="experience">Experience:</label>
+                    <textarea id="experience" rows="4" cols="40"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit" onclick = "displayResume()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

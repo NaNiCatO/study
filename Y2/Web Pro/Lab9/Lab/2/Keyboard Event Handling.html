@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://ict11.ce.kmitl.ac.th/webprog/resources/keyboardEvent.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Keyboard Event Handling</title>
+<body>
+  <p id="output">Keyup: Key code: 17, Key: Control</p>
+
+  <script>
+    const output = document.getElementById('output');
+    // Keyup event handler
+    document.addEventListener('keyup', (event) => {
+      output.innerHTML = `Keyup: Key code: ${event.keyCode}, Key: ${event.key}`;
+    });
+    // Keypress event handler
+    document.addEventListener('keypress', (event) => {
+      output.innerHTML = `Keypress: Char code: ${event.charCode}, Char: ${String.fromCharCode(event.charCode)}`;
+    });
+  </script>
+
+
+</body></html>

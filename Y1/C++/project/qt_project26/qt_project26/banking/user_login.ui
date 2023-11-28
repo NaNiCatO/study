@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>User_login</class>
+ <widget class="QDialog" name="User_login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>642</width>
+    <height>466</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>-20</y>
+     <width>331</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+    font-family: century gothic;
+font-size:24px;
+}
+QFrame
+{
+background:    #778da9;
+border-radius:60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Mode&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>250</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+    font-family: century gothic;
+font-size:36px;
+}
+
+
+QPushButton {
+    background: #061f57;
+    border-radius: 60px;
+}
+
+QToolButton {
+    background: #red;
+    border-radius: 60px;
+}
+
+QPushButton:hover {
+    color: white;
+    border-radius: 15px;
+    background: #1b263b;
+    transition: background 0.3s, color 0.3s;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Withdraw</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>-20</y>
+     <width>681</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame{
+background:grey;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>340</y>
+     <width>321</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+    font-family: century gothic;
+font-size:36px;
+}
+
+
+QPushButton {
+    background: #061f57;
+    border-radius: 60px;
+}
+
+QToolButton {
+    background: #red;
+    border-radius: 60px;
+}
+
+QPushButton:hover {
+    color: white;
+    border-radius: 15px;
+    background: #1b263b;
+    transition: background 0.3s, color 0.3s;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Transaction</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_1">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>130</y>
+     <width>251</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>deposit</string>
+   </property>
+  </widget>
+  <zorder>label_5</zorder>
+  <zorder>label</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_1</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

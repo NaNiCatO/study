@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sad</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(54, 162, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgba(54, 162, 235, 1);
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chartMenu">
+      <p>Summary Graph</p>
+    </div>
+    <div class="chartCard">
+      <!-- <div class="chartBox"> -->
+        <canvas id="myChart"></canvas>
+      <!-- </div> -->
+
+    </div>
+    <button onclick = "chartType('bar')">Bar Chart</button>
+    <button onclick = "chartType('line')">Line Chart</button>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+    // setup 
+
+    const data = {
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',
+      'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    
+    
+      datasets: [{
+    label: 'Weekly Sales',
+    data: [-2, 12, 6, 9, 12, 3, 9,1, 2, 3, 4, 5, 6, 7,18, 
+        12, 6, 9, 12, 3, 9,8, 9, 10, 11, 12, 13, 14,18, 12, 6, 9, 12, 3, 9,],
+    backgroundColor: [
+      'rgba(255, 26, 104, 0.2)',
+    ],
+    borderColor: [
+      'rgba(255, 26, 104, 1)',
+    ],
+    borderWidth: 3,
+  },
+  ////////////////////////////////////////////////////////////////
+  {
+    label: 'Sales2',
+    data: [9, -1, 6, 4, 2, 6, 12,-5, 6, 7, 9, 4, 12, 8,12, 
+        12, 6, 9, 12, 3, 1,2, 3, 5, -5, 12, 0, 9,-1, 12, -3, -4, -5, 3, 9,8],
+    backgroundColor: [
+      'rgba(75, 192, 192, 0.2)',
+    ],
+    borderColor: [
+      'rgba(75, 192, 192, 1)',
+    ],
+    borderWidth: 3,
+},
+
+
+
+{
+    label: 'Sales3',
+    data: [-5,12, -7, -4, 2, 3, 5, -5, 12, 0, 9,-1, 12, -3, -4, -5,12, 8,12, 
+        12, 6, 9, 12, 3, 9,8, 9, 10, 11, 12 -1, 6, 4, 2, 6, 12,- 9,8],
+    backgroundColor: [
+      'black',
+    ],
+    borderColor: [
+      'black',
+    ],
+    borderWidth: 3,
+}]
+  ////////////////////////////////////////////////////////////////
+
+};
+
+
+
+
+//second phase
+    // moveChart block
+    const moveChart={
+        id: 'moveChart',
+        afterEvent(chart, args){
+            const{ctx, canvas, chartArea:{left, right, top, bottom, width, height}} = chart;
+            
+            canvas.addEventListener('mousemove', (event) =>{
+                const x = args.event.x;
+                const y = args.event.y;
+
+                if(x >= left - 15 && x<= left + 15 && y >= height/2 +top -15 && y<= height/2 + top +15){
+                    canvas.style.cursor = 'pointer';
+                }   
+                 else if (x >= right - 15 && x<= right + 15 && y >= height/2 +top -15 && y<= height/2 + top +15){
+                    canvas.style.cursor = 'pointer';
+
+                }
+                else{
+                    canvas.style.cursor = 'default';
+                }
+
+            })
+        },
+
+
+
+
+
+        afterDraw(chart, args, pluginOptions) {
+            const{ctx, chartArea:{left, right, top, bottom, width, height}} = chart;
+
+            class CircleChevron{
+                // constructor(x1,y1){
+                    
+                // }
+                draw(ctx, x1, pixel){
+                    const angle = Math.PI / 180
+
+                    ctx.beginPath();
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = 'rgba(102, 102, 102, 0.5)';
+                    ctx.fillStyle = 'White';
+                    ctx.arc(x1, height/2 + top, 15, angle * 0, angle * 360, false)
+                    ctx.stroke();
+                    ctx.fill();
+                    ctx.closePath(); 
+
+                    //arrow left in plugin point
+                    ctx.beginPath();
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = 'rgba(255, 26, 104, 0.2)';
+                    ctx.moveTo(x1 + pixel, height/2 + top - 7.5); 
+                    ctx.lineTo(x1 - pixel, height/2 + top);
+                    ctx.lineTo(x1 + pixel, height/2 + top + 7.5);
+                    ctx.stroke();
+                    ctx.closePath();
+                } 
+            }
+
+            let drawCircleLeft = new CircleChevron();
+            drawCircleLeft.draw(ctx,left, 5);
+
+
+
+            let drawCircleRight = new CircleChevron();
+            drawCircleRight.draw(ctx, right, -5);
+
+///////////////////////////////// Bar //////////////////////////
+            // //scroll bar
+
+            // ctx.beginPath();
+            // ctx.fillStyle = 'lightgrey';
+            // ctx.rect(left + 15 , bottom + 30, width - 30, 15);
+            // ctx.fill();
+            // ctx.closePath;
+
+
+            // ctx.beginPath();
+            // ctx.fillStyle = 'lightgrey';// bar color
+            // ctx.rect(left, bottom + 30, 15, 15);
+            // ctx.rect(right - 15 , bottom + 30, 15, 15);
+            // ctx.fill();
+            // ctx.closePath;
+
+ 
+            // //move bar
+            // const min = chart.options.scales.x.min;
+            // let startingPoint =  left  + width / data.datasets[0].data.length * min;
+            // const barWidth = (width - 30) / data.datasets[0].data.length * 7;
+            // // console.log(startingPoint)
+            // const totalWidth = startingPoint + barWidth
+            // if(totalWidth > width) {
+            //     startingPoint = right - barWidth;
+
+            // }
+
+
+            // ctx.beginPath();
+            // ctx.fillStyle = 'black';
+            // ctx.rect(startingPoint, bottom + 30, barWidth, 15);
+            // ctx.fill();
+            // ctx.closePath();
+
+
+        }
+
+    }
+
+    // config 
+    const config = {
+      type: 'line',
+      data,
+      options: {
+        layout:{
+            padding:{
+                right:18,
+                bottom: 30
+            }
+        },
+        scales: {
+            x:{
+                min:0,
+                max:6, // scope of 1 page shown
+            },
+          y: {
+            beginAtZero: true
+          }
+        }
+      },
+      plugins:[moveChart]
+    };
+
+
+        // config 
+    const config2 = {
+      type: 'bar',
+      data,
+      options: {
+        layout:{
+            padding:{
+                right:18,
+                bottom: 30
+            }
+        },
+        scales: {
+            x:{
+                min:0,
+                max:6, // scope of 1 page shown
+            },
+          y: {
+            beginAtZero: true
+          }
+        }
+      },
+      plugins:[moveChart]
+    };
+
+
+
+ 
+    // render init block
+    let myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+
+
+
+
+
+
+
+
+    function moveScroll(){
+        const {ctx, canvas, chartArea:{left, right, top, bottom, width, height}} = myChart;
+
+        canvas.addEventListener('click',(event) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+
+            if(x >= left - 15 && x<= left + 15 && y >= height/2 +top -15 && y<= height/2 + top +15){
+ 
+                myChart.options.scales.x.min = myChart.options.scales.x.min - 7;
+                myChart.options.scales.x.max = myChart.options.scales.x.max - 7;
+                // data in index[]
+                if(myChart.options.scales.x.min <= 0){
+                    myChart.options.scales.x.min = 0;
+                    myChart.options.scales.x.max = 6;
+                };
+
+
+                }
+
+ 
+            if(x >= right - 15 && x<= right + 15 && y >= height/2 +top -15 && y<= height/2 + top +15){
+ 
+                myChart.options.scales.x.min = myChart.options.scales.x.min + 7;
+                myChart.options.scales.x.max = myChart.options.scales.x.max + 7;
+// data in index[]
+                if(myChart.options.scales.x.min >= data.datasets[0].data.length){
+                    myChart.options.scales.x.min = data.datasets[0].data.length - 7;
+                    myChart.options.scales.x.max = data.datasets[0].data.length;
+                };
+
+   
+            }
+            myChart.update();
+
+        })
+
+    }
+
+    function chartType(type){
+
+        myChart.destroy();
+        if(type === 'line'){
+             myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+            
+        );
+        }
+        if(type === 'bar'){
+             myChart = new Chart(
+            document.getElementById('myChart'),
+            config2
+            
+        );
+        }
+
+
+    }
+    
+    myChart.ctx.onclick = moveScroll();
+    </script>
+
+  </body>
+</html>

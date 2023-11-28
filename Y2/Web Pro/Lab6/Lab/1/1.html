@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <table id="output">
+        <tr>
+            <td>Item Name</td>
+            <td>Amount</td>
+            <td>Pice</td>
+        </tr>
+    </table>
+    <br><button onclick="resetTable()">Reset</button>
+
+    <h2>Add Item</h2>
+    <form id="input">
+    <label for="in_name">Name: </label>
+    <input type="text" id="in_name"><br>
+    <label for="in_amount">Amount: </label>
+    <input type="text" id="in_amount"><br>
+    <label for="in_price">Price: </label>
+    <input type="text" id="in_price"><br>
+    <input type="button" onclick="addText()" value="Add">
+    <input type="reset" value="Reset">
+    </form>
+
+    <script>
+    function addText() {
+        var inputNameElement = document.getElementById("in_name");
+        var inputAmountElement = document.getElementById("in_amount");
+        var inputPriceElement = document.getElementById("in_price");
+        const outputElement = document.getElementById("output");
+
+        var newRow = outputElement.insertRow(outputElement.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+
+        cell1.innerHTML = inputNameElement.value;
+        cell2.innerHTML = inputAmountElement.value;
+        cell3.innerHTML = inputPriceElement.value;
+
+        inputNameElement.value = '';
+        inputAmountElement.value = '';
+        inputPriceElement.value = '';
+    }
+
+    function clearText() {
+        document.getElementById("Form").reset();
+    }
+
+    function resetTable() {
+        const outputElement = document.getElementById("output");
+        outputElement.innerHTML = '<tr><td>Item Name</td><td>Amount</td><td>Price</td></tr>';
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://161.246.5.61/Lab.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" type="text/css" href="mystyles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <img src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png"
+                alt="image">
+            <h3>Personal Information:</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <label for="age">Age:</label>
+            <input type="range" id="age" min="0" max="100">
+            <output>50</output>
+            <label for="profile">Profile:</label>
+            <textarea id="profile" rows="4" cols="30"></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone">
+        </div>
+        <div class="section">
+            <h3>Address:</h3>
+            <input type="text" id="street" placeholder="Maple Street">
+            <input type="text" id="city" placeholder="California">
+            <select id="country">
+                <option value="Thailand">Option 1</option>
+                <option value="England">Option 2</option>
+                <option value="Scorland">Option 3</option>
+            </select>
+            <h3>Education:</h3>
+            <input type="text" id="university" placeholder="KMITL">
+            <input type="text" id="degree" placeholder="SE">
+            <h3>Year of Graduation:</h3>
+            <input type="date" id="graduationYear">
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h3>Contact:</h3>
+            <label for="ref">Reference:</label>
+            <textarea id="ref" rows="4" cols="30"></textarea>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" rows="4" cols="30"></textarea>
+        </div>
+        <div class="section">
+            <label for="favColour">Favorite Colour:</label>
+            <input type="color" id="favColour">
+            <h3 style="margin-top: 10px;">Experience:</h3>
+            <textarea id="experience" rows="4" cols="30"></textarea>
+            <div class="submit-button">
+                <input type="submit" value="Submit" onclick="displayResume()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

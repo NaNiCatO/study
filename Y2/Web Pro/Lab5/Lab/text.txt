@@ -1,0 +1,22 @@
+.l_column input[type="text"],
+.l_column input[type="email"],
+.l_column input[type="tel"],
+.l_column input[type="range"],
+.l_column input[type="date"],
+.l_column input[type="color"],
+.l_column textarea,
+.l_column select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.l_column input[type="text"]:hover,
+.l_column input[type="email"]:hover,
+.l_column input[type="tel"]:hover,
+.l_column input[type="range"]:hover,
+.l_column input[type="date"]:hover,
+.l_column input[type="color"]:hover,
+.l_column textarea:hover,
+.l_column select:hover {
+    background-color: rgb(208,202,225);
+}

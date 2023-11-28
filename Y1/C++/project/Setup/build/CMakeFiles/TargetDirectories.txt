@@ -1,0 +1,3 @@
+C:/Users/bbcom/Desktop/Code/C++/project/Setup/build/CMakeFiles/hello.dir
+C:/Users/bbcom/Desktop/Code/C++/project/Setup/build/CMakeFiles/edit_cache.dir
+C:/Users/bbcom/Desktop/Code/C++/project/Setup/build/CMakeFiles/rebuild_cache.dir
