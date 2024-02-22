@@ -6,36 +6,6 @@ from datetime import datetime
 import random
 
 
-# class ContorlWidget():
-#     def __init__(self, element_id):
-#         self.element_id = element_id
-#         self._element = None
-
-#     @property
-#     def element(self):
-#         if self._element is None:
-#             self._element = document.getElementById(self.element_id)
-#         return self._element
-    
-#     def drawWidget(self):
-#         self.button1 = document.createElement("button")
-#         self.button1.innerHTML = "Add Q1"
-#         self.button1.style.width = "100px"
-#         self.button1.onclick = NotificationWidget(self.element_id).drawWidget
-#         self.element.appendChild(self.button1)
-
-#         self.button2 = document.createElement("button")
-#         self.button2.innerHTML = "Add Q2"
-#         self.button2.style.width = "100px"
-#         self.button2.onclick = AnimationWidget(self.element_id).drawWidget
-#         self.element.appendChild(self.button2)
-
-#         self.button3 = document.createElement("button")
-#         self.button3.innerHTML = "Add Q3"
-#         self.button3.style.width = "100px"
-#         self.button3.onclick = ColorfulAnimtionWidget(self.element_id).drawWidget
-#         self.element.appendChild(self.button3)
-
 
 class AdstractWidget(ABC):
     def __init__(self, element_id):
@@ -127,11 +97,17 @@ class NotificationWidget(AdstractWidget):
         self.button3.onclick = self.removeWidget
         self.element.appendChild(self.button3)
 
+        self.div_container = document.createElement("div")
+        self.div_container.appendChild(self.input_text)
+        self.div_container.appendChild(self.button1)
+        self.div_container.appendChild(self.button2)
+        self.div_container.appendChild(self.button3)
+        self.element.appendChild(self.div_container)
+
+
     def removeWidget(self, event):
-        self.element.removeChild(self.input_text)
-        self.element.removeChild(self.button1)
-        self.element.removeChild(self.button2)
-        self.element.removeChild(self.button3)
+        self.element.removeChild(self.div_container)
+
 
 
 class AnimationWidget(AdstractWidget):
@@ -181,10 +157,15 @@ class AnimationWidget(AdstractWidget):
         self.button2.onclick = self.removeWidget
         self.element.appendChild(self.button2)
 
+        self.div_container = document.createElement("div")
+        self.div_container.appendChild(self.image)
+        self.div_container.appendChild(self.button1)
+        self.div_container.appendChild(self.button2)
+        self.element.appendChild(self.div_container)
+
+
     def removeWidget(self, event):
-        self.element.removeChild(self.image)
-        self.element.removeChild(self.button1)
-        self.element.removeChild(self.button2)
+        self.element.removeChild(self.div_container)
         self.interval = js.clearInterval(self.interval)
 
     
@@ -213,16 +194,14 @@ class ColorfulAnimtionWidget(AnimationWidget):
         self.button1.innerHTML = "pause"
         self.button1.style.width = "600px"
         self.button1.onclick = self.on_click
-        self.element.appendChild(self.button1)
 
         self.button_ran = document.createElement("button")
         self.button_ran.innerHTML = "random color"
         self.button_ran.style.width = "600px"
         self.button_ran.onclick = self.on_click_random_color
-        self.element.appendChild(self.button_ran)
 
         self.div = document.createElement("div")
-        self.div.appendChild(self.button)
+        self.div.appendChild(self.button1)
         self.div.appendChild(self.button_ran)
         self.element.appendChild(self.div)
 
@@ -232,13 +211,18 @@ class ColorfulAnimtionWidget(AnimationWidget):
         self.button2.onclick = self.removeWidget
         self.element.appendChild(self.button2)
 
+        self.div_container = document.createElement("div")
+        self.div_container.appendChild(self.image)
+        self.div_container.appendChild(self.button1)
+        self.div_container.appendChild(self.button_ran)
+        self.div_container.appendChild(self.button2)
+        self.element.appendChild(self.div_container)
+
+
     def removeWidget(self, event):
-        self.element.removeChild(self.image)
-        self.element.removeChild(self.button1)
-        self.element.removeChild(self.button_ran)
-        self.element.removeChild(self.div)
-        self.element.removeChild(self.button2)
+        self.element.removeChild(self.div_container)
         self.interval = js.clearInterval(self.interval)
+
 
 if __name__ == "__main__":
     control = ContorlWidget("container")

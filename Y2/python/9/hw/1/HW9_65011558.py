@@ -24,7 +24,7 @@ class AdstractWidget(ABC):
 class Table_frame(AdstractWidget):
     def __init__(self, element_id):
         super().__init__(element_id)
-        self.jump_sound = js.Audio.new("./sounds/rabbit_jump.wav")
+        
         self.counter = 0
         self.interval = None
         self.arr_frame = []
@@ -105,6 +105,7 @@ class Table_frame(AdstractWidget):
         self.image.style.height = "600px"
         self.image.src = "./images/frame-1.png"
         
+        self.jump_sound = js.Audio.new("./sounds/rabbit_jump.wav")
         on_setInterval = create_proxy(self.on_setInterval)
         self.interval = js.setInterval(on_setInterval, self.speed)
 
